@@ -1,0 +1,25 @@
+<%= form_with(model: @recipe, local: true) do |f| %>
+      <div class="task-text">title</div>
+      <div class="task-container">
+      <%= f.text_field :title, placeholder: "例)title", class:"text-area" %>
+    </div>
+    <div class="time-title">making_time</div>
+    <div class="limit_time-container">
+      <%= f.text_field :making_time, class:"time-table" %>
+    </div>
+     <div class="states-title">状態</div>
+    <div class="states-container">
+    <%= f.text_field :serves, placeholder: "例)2人", class:"text-area" %>
+    </div>
+     <div class="task-container">
+      <%= f.text_field :ingredients, placeholder: "例)にんじん、玉ねぎ", class:"text-area" %>
+    </div>
+     <div class="task-container">
+      <%= f.text_field :cost, placeholder: "例)1000円", class:"text-area" %>
+    </div>
+    <div class="send-container">
+      <%= f.submit "登録する", class:"send-btn" %>
+    </div>
+    <div class="back-container"><%= link_to '戻る', root_path, class:"back-btn"%></div>
+    
+    <% end %>

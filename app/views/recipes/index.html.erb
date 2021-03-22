@@ -1,0 +1,24 @@
+
+<%@recipes.each do |recipe|%>
+<%= link_to recipe_path(recipe.id), method: :get do %>
+<%= recipe.title %>
+<%= recipe.making_time %>
+<%= recipe.serves %>
+<%= recipe.ingredients %>
+<%= recipe.cost %>
+<%end%>
+<%end%>
+
+<%@recipes.each do |recipe|%>
+<%= link_to recipe_path(recipe.id), method: :get do %>
+<span><%= recipe.title %>
+<span><%= recipe.making_time %>
+<span><%= recipe.serves %>
+<span><%= recipe.ingredients %>
+<span><%= recipe.cost %>
+<%end%>
+<%end%>
+
+<div>
+<%=link_to "new_action",new_recipe_path%>
+</div>

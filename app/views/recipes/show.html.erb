@@ -1,0 +1,6 @@
+<div><%= @recipe.title %></div>
+<div><%= @recipe.making_time %></div>
+<div><%= @recipe.serves %></div>
+<div><%= @recipe.ingredients %></div>
+<div><%= @recipe.cost %></div>
+<%=link_to "編集", edit_recipe_path(@recipe.id)%>
